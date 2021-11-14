@@ -1,0 +1,23 @@
+class Point {
+    public int x, y;
+}
+
+int gameboard[][] = new int[5][5];
+int gameBoardWidth = 5;
+int gameBoardHeight = 5;
+
+void Point nextHit(List<Point> knownPoints) {
+    for (Point current : knownPoints) {
+        if (current.x + 1 < gameBoardWidth) {
+            if (gameboard[current.y][current.x+1] == 0) {
+                return new Point(current.y, current.x + 1);
+            }
+        }
+        if (current.x - 1 > gameBoardWidth) {
+            if (gameboard[current.y][current.x-1] == 0) {
+                return new Point(current.y, current.x-1);
+            }
+        }
+    }
+    return null;
+}
