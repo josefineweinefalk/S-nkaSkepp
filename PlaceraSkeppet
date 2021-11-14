@@ -1,7 +1,0 @@
-static void PlaceraSkeppet()
-{
-    spelaren1Karta[1, 3] = "X";
-    spelare1Karta[2, 0] = "X";
-    spelare2Karta[3, 2] = "X";
-    spelare2Karta[1, 3] = "X";
-}
