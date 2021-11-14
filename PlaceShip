@@ -1,0 +1,42 @@
+public static void PlaceShips() {
+		currentPlayer = 1;
+		System.out.print("Namn på spelaren: ");
+		playerName = scan.nextLine();
+		System.out.println();
+		System.out.println(playerName + "'s tur att placera ut sina skepp.");
+		System.out.println("=======================================");
+		specialShips();
+		System.out.println("Vill du placera ut båtarna själv?");
+		System.out.print("Ja/Nej: ");
+		boolean svar = false;
+		while(!svar) {
+			switch(scan.next()) {
+			case "ja":
+			case "Ja":
+				for (BattleShip ship : playerShips()) {
+					System.out.println();
+					printBoard(0);
+					placeShip(ship);
+				}
+				svar = true;
+				break;
+			case "nej":
+			case "Nej":
+				for(BattleShip ship : playerShips()) {
+					computerPlaceShips(ship);
+				}
+				svar = true;
+				System.out.println();
+				break;
+			default:
+				System.out.print("Vänligen svara ja eller nej: ");
+			}
+		}
+		System.out.println();
+		System.out.println("Dina båtar är placerade såhär:");
+		printBoard(0);
+		scan.nextLine();
+		System.out.println("Tryck på Enter för att fortsätta");
+		scan.nextLine();
+		System.out.println();
+	}
