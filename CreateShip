@@ -1,0 +1,21 @@
+public class CreateShip {
+
+   private static final ArrayList<Ship> ships = new ArrayList<>();
+
+   public CreateShip() {
+
+   }
+
+   public ArrayList<Ship> Addships(){
+      ships.add(new Ship(5,"hangarfartyg"));
+      ships.add(new Ship(4,"slagskepp"));
+      ships.add(new Ship(4,"slagskepp"));
+      ships.add(new Ship(3,"kryssare"));
+      ships.add(new Ship(3,"kryssare"));
+      ships.add(new Ship(3,"kryssare"));
+      ships.add(new Ship(2,"ubåtar"));
+      ships.add(new Ship(2,"ubåtar"));
+      ships.add(new Ship(2,"ubåtar"));
+      ships.add(new Ship(2,"ubåtar"));
+      return ships;
+   }
